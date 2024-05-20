@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Movie{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-6 mx-auto my-5 p-3 rounded shadow shadow-lg ">
+            <h1 class="heading">Add a Movie</h1>
+            <form method="POST" action="/add">
+                <div class="mb-3">
+                  <label for="" class="form-label">Movie Title</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="title" required>
+                 
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Year</label>
+                  <input type="number" class="form-control" id="exampleInputEmail1" name="year" required>
+                 
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" name="description" id="floatingTextarea2" style="height: 100px" required></textarea>
+                    <label for="floatingTextarea2">Description</label>
+                  </div>
+                
+                  <div class="mb-3">
+                    <label for="" class="form-label">Rating</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="rating" required>
+                   
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Ranking</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="ranking" required>
+                   
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Reviews</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="reviews" required>
+                   
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Image URL</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="imageurl" required>
+                   
+                  </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+              </form>
+        </div>
+    </div>
+</div>
+<!-- <div class="content">
+    
+</div> -->
+{% endblock %}

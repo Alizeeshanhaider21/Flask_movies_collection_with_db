@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Movies{% endblock %}
+
+{% block content %}
+<div class="content">
+  <div class="container">
+    <div class="row">
+        <div class="col-6 mx-auto my-5 p-3 rounded shadow shadow-lg ">
+            <h1 class="heading">Edit Record</h1>
+            <form method="POST" action="/edit/{{movie.id}}">
+                <div class="mb-3">
+                  <label for="" class="form-label">Movie Title</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{movie.movie_name}}" required>
+                 
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Year</label>
+                  <input type="number" class="form-control" id="" name="year" value="{{movie.year}}" required>
+                 
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" name="description"  id="floatingTextarea2" style="height: 100px" required>{{movie.description}}</textarea>
+                    <label for="floatingTextarea2" >Description</label>
+                  </div>
+                
+                  <div class="mb-3">
+                    <label for="" class="form-label">Rating</label>
+                    <input type="text" class="form-control" id="" name="rating" value="{{movie.rating}}" required>
+                   
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Ranking</label>
+                    <input type="text" class="form-control" id="" name="ranking" value="{{movie.ranking}}" required>
+                   
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Reviews</label>
+                    <input type="text" class="form-control" id="" name="reviews" value="{{movie.reviews}}" required>
+                   
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Image URL</label>
+                    <input type="text" class="form-control" id="" name="imageurl" value="{{movie.img_url}}" required>
+                   
+                  </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+              </form>
+        </div>
+    </div>
+</div>
+
+  </div>
+{% endblock %}
